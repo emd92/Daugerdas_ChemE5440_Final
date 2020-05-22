@@ -13,4 +13,9 @@ tspan = (0.0,50.0)
 xlim = (0, 1, 30)
 ylim = (0, 1, 30)
 
-phaseplot(ODE_Final,xlim,ylim,clines=true,t=tspan,norm=true,scale=0.5)
+#Show that in the long-time limit, the system will settle into a steady state
+x0 = ([0.35,0.3],)
+x1 = ([0.3,0.35],)
+
+phaseplot(ODE_Final,xlim,ylim,xinit= (x0),clines=true,t=tspan,norm=true,scale=0.5)
+phaseplot(ODE_Final,xlim,ylim,xinit= (x1),clines=true,t=tspan,norm=true,scale=0.5)
